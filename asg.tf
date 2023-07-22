@@ -9,11 +9,6 @@ module "asg" {
   desired_capacity          = 1
   wait_for_capacity_timeout = 0
   health_check_type         = "EC2"
-  # vpc_zone_identifier       = [
-  #   "subnet-fa7c7cb0", 
-  #   "subnet-5e23c125",
-  #   "subnet-aea67bc7"
-  # ]
   vpc_zone_identifier = var.asg_subnets
 
   initial_lifecycle_hooks = [
